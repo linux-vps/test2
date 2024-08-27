@@ -11,21 +11,6 @@ Using NodeJS, for client and server. Display HTML by simple EJS view engine.
 [![Demo video](https://img.youtube.com/vi/BJ2MwkFwYYs/0.jpg)](https://www.youtube.com/watch?v=BJ2MwkFwYYs)
 
 
-
-### Some documentation about this project:
- 1. OAuth 2.0 Protocol:
-    https://training.bitrix24.com/support/training/course/?COURSE_ID=169&LESSON_ID=20110
-    https://training.bitrix24.com/rest_help/oauth/index.php
- 3. Ngrok:
-    https://ngrok.com/download
- 4. REST
-    https://training.bitrix24.com/rest_help/
- 5. Batch method:
-    https://training.bitrix24.com/rest_help/general/batch.php
-### An little collection for postman for the crm module of bitrix24.
-***Example in postman***:
-    - https://gist.github.com/gowizzard/3ae79b5fb3b4a73494e3c790c6d820c6
-
 ## Prepare
 ##### Bitrix24 OAuth 2.0: https://api.postman.com/collections/34247664-f81670c2-998b-4f5c-abcb-e9ec6aca61a3?access_key=PMAT-01J6AEPZ7CZG6K36PCYK5EGGP2
 ##### .env description:
@@ -150,4 +135,16 @@ npm install
 npm run build
 pm2 start index.js --watch --ignore-watch "node_modules,config" --name "public"
 ```
-
+### Some documentation about this project:
+ 1. OAuth 2.0 Protocol:
+    https://training.bitrix24.com/support/training/course/?COURSE_ID=169&LESSON_ID=20110
+    https://training.bitrix24.com/rest_help/oauth/index.php
+ 3. Ngrok:
+    https://ngrok.com/download
+ 4. REST
+    https://training.bitrix24.com/rest_help/
+ 5. Batch method:
+    https://training.bitrix24.com/rest_help/general/batch.php
+### An little collection for postman for the crm module of bitrix24.
+***Example in postman***:
+    - https://gist.github.com/gowizzard/3ae79b5fb3b4a73494e3c790c6d820c6
