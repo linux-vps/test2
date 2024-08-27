@@ -20,4 +20,4 @@ if (!APP_SECRET || !BITRIX24_DOMAIN || !APP_ID || !CLIENT_URL) {
 export const AUTHORIZATION_SERVER="https://oauth.bitrix.info/oauth/token/?grant_type=refresh_token";
 export const TOKEN_STORAGE_FILE = "config/tokenStorage.json";
 export const REFRESH_TOKEN_URL = `${AUTHORIZATION_SERVER}&client_id=${APP_ID}&client_secret=${APP_SECRET}&code=${CODE}&refresh_token=${REFRESH_TOKEN}`;
-// https://oauth.bitrix.info/oauth/token/?grant_type=refresh_token
+//https://oauth.bitrix.info/oauth/token/?grant_type=refresh_token&client_id=local.xxx&client_secret=xxx&code=xxx&refresh_token=xxx

@@ -148,7 +148,7 @@ export const deleteData = async (req, res) => {
     const { idContact, idBank } = req.body;
     try {
         const requisiteEntity = await callMethod(
-            'crm.requisite.list',
+            'crm.requisite.list', // action
             { 
                 filter: { ENTITY_ID: idContact },
                 select: ['ID'] 

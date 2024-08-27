@@ -15,7 +15,7 @@ import { response } from 'express';
 async function callMethod(action, payload = {}) {
     let url = `https://${BITRIX24_DOMAIN}/rest/${action}.json`;
 
-    let token = await getStoredRefreshToken();
+    let token = await getStoredRefreshToken(); // lấy token
     url = new URL(url);
     url.searchParams.append('auth', token);
     const params = payload.params || null;
@@ -28,10 +28,11 @@ async function callMethod(action, payload = {}) {
         let response = null;
         response = await callApi(url, payload, id, params);
         // console.log(response)
+        // Nếu token hết hạn
         if (response.status === 401 && response.statusText==='Unauthorized') {
             console.log("Renew token");
-            // token hết hạn
-            token = await getRefreshToken();
+
+            token = await getRefreshToken(); // làm mới token
             url.searchParams.set('auth', token);
             // url.searchParams.append('auth', token);
             

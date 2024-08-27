@@ -50,6 +50,7 @@ const writeData = (data) => {
 export const install = async (req, res) => {
     const { DOMAIN, PROTOCOL, LANG, APP_SID } = req.query;
     const { REFRESH_ID, member_id, AUTH_ID } = req.body;
+    // nhận thông tin từ request
 
     const data = readData();
     if(!member_id){
@@ -64,7 +65,7 @@ export const install = async (req, res) => {
         data[member_id].DOMAIN = DOMAIN;
         writeData(data);
     } else {
-        // xác thực lần đầu => thêm mới
+        // xác thực lần đầu => thêm mới vào file
         data[member_id] = { REFRESH_ID, AUTH_ID, APP_SID, DOMAIN };
         writeData(data);
         fist_install = true;

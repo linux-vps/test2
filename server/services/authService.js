@@ -4,6 +4,7 @@ import fetch from 'node-fetch';
 import fs from 'fs';
 import { REFRESH_TOKEN_URL, TOKEN_STORAGE_FILE } from '../config/config.js';
 
+//           làm mới token
 export const getRefreshToken = async (req, res) => {
     try {
         const response = await fetch(REFRESH_TOKEN_URL);
@@ -17,7 +18,7 @@ export const getRefreshToken = async (req, res) => {
             throw new Error('URl đúng nhưng thiếu access token');
         }
         fs.writeFileSync(TOKEN_STORAGE_FILE, JSON.stringify({ refreshToken: data.access_token }));
-        
+        // Viết vào file
         return data.access_token;
     } catch (error) {
         console.error('Error getting access token:', error.message);
