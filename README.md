@@ -100,42 +100,18 @@ Navigate to the test2 first.
 cd test2
 ```
 
-### Before starting: Prepare Environment variables.
-#### In each .env.example file in each directory
-- Change to your information variables with the following below:
-  - **public**:
-    - BACKEND_SERVER_URL=<Your_Server_Url_Address>
-    - PORT=<Port_That_Run_The_Frontend_Project>
-    example:
-      BACKEND_SERVER_URL=http://eop.id.vn:5000/api/ 
-      PORT=5001
-  - **server**:
-    - REFRESH_TOKEN_URL=https://bx-oauth2.aasc.com.vn/bx/oauth2_token #(ADT EasyOauth2 api, this is the api for getting refresh_token)
-    - APP_ID=<your_app_id>
-    - FIELD_USER_GET_URL=https://<your_sub_domain>.bitrix24.vn/rest/user.get.json #(api Retrieves filtered list of users. read https://training.bitrix24.com/rest_help/users/user_get.php ) 
-    - PORT=5000
-    example:
-      REFRESH_TOKEN_URL=https://bx-oauth2.aasc.com.vn/bx/oauth2_token
-      APP_ID=local.myappid123456
-      FIELD_USER_GET_URL=https://my.bitrix24.vn/rest/user.get.json
-      PORT=5000
-   -  **How to edit these file in terminal**
-        - Install nano:
-        ```bash
-        sudo apt install nano
-        nano --version
-        ```
-    #### Change all .env.example to .env
-    Return to the test2 folder and typing this.
-    ```bash
-    cd public
-    mv .env.example .env
-    cd ..
-    cd server
-    mv .env.example .env
-    cd ..
-    
-    ```
+
+ Change all .env.example to .env
+ Return to the test2 folder and typing this.
+ ```bash
+ cd public
+ mv .env.example .env
+ cd ..
+ cd server
+ mv .env.example .env
+ cd ..
+ 
+ ```
 Now just run it
 
 Navigate to the server directory, install dependencies, and start the server:
