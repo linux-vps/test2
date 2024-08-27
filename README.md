@@ -1,115 +1,104 @@
-## __DEMO:__
-- https://d028-47-84-81-252.ngrok-free.app
-
-## Description
-
-Simple web app to manage contacts and banking details in Bitrix24 app (b24-7w9mjb.bitrix24.vn)
-Using NodeJS, for client and server. Display HTML by simple EJS view engine.
-- web app with ngrok tunel: https://d028-47-84-81-252.ngrok-free.app/
-- web app in bitrix24: check this video below
+## Demo
+- web app với ngrok tunel: https://d028-47-84-81-252.ngrok-free.app/ ( nếu trang không hiển thị thông tin thì cần refresh lại là được)
+- web app trong bitrix24: video bên dưới
 
 [![Demo video](https://img.youtube.com/vi/BJ2MwkFwYYs/0.jpg)](https://www.youtube.com/watch?v=BJ2MwkFwYYs)
 
-
-## Prepare
+## Chuẩn bị
 ##### Bitrix24 OAuth 2.0: https://api.postman.com/collections/34247664-f81670c2-998b-4f5c-abcb-e9ec6aca61a3?access_key=PMAT-01J6AEPZ7CZG6K36PCYK5EGGP2
-##### .env description:
+##### File biến môi trường .env:
 ###### server:
   - CLIENT_URL=<https://domain/path> (frontend url))
   - APP_ID=<application_id> (Application ID (client_id), e.g.: local.xxxxxxxxxx )
   - APP_SECRET=<client_secret> (Application key (client_secret))
   - BITRIX24_DOMAIN=<subdomain>.bitrix24.vn
-  - CODE=<Oauth_First_Authorization_Code_In_URL> ( use browser )
+  - CODE=<code ở url> ( bước chuẩn bị oauth )
   - REFRESH_TOKEN=<refresh_token>
-  - PORT=<server_port> (e.g. 5000).
+  - PORT=<server_port> ( 5000).
 
 ###### public:
   - BACKEND_SERVER_URL=<server_address>/api/ 
-  - PORT=<client_port> (e.g. 5001)
-## Quick install
-paste this section bellow in your terminal.
+  - PORT=<client_port> (5001)
+## Cài đặt nhanh
+lệnh bên dưới hỗ trợ cài Node và các thư viện cần thiết
 ```
 bash <(curl -Ls https://raw.githubusercontent.com/linux-vps/test2/main/install.sh)
 ```
+để deploy, chạy lệnh dưới đây trong thư mục dự án:
+```bash
+./deploy.sh
+```
 
-## Installation
+## Các bước cài đặt cho linux
 
-### Step 1: Install NodeJS and NPM using nvm
+### Bước 1: Cài đặt NodeJS và NPM sử dụng nvm
 
-First, log in as the root user or a user with sudo privileges.
+Đầu tiên, cần đăng nhập bằng tài khoản root hoặc user có quyền root
 
 ```bash
 sudo su
 ```
 
-Install node version manager (nvm) by typing the following at the command line.
+Cài đặt node version manager (nvm).
 
 ```bash
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
 ```
-Activate nvm by typing the following at the command line.
+Activate nvm.
 
 ```bash
 . ~/.nvm/nvm.sh
 ```
 
-Use nvm to install the latest version of Node.js by typing the following at the command line.
-
+Dùng nvm để cài đặt Nodejs
 ```bash
 nvm install node
 ```
 
-Test that node and npm are installed and running correctly by typing the following at the terminal:
+Kiểm tra đã có node và npm chưa:
 
 ```bash
 node -v
 npm -v
 ```
 
-### Step 2: Install PM2
-- PM2 is a popular production process manager for Node.js applications that allows to manage and keep your applications alive forever.
+### Bước 2: Cài PM2
+- PM2 giúp web app luôn chạy.
 ```bash
 npm install pm2@latest -g && pm2 update
 ```
- check if PM2 is installed
+kiểm tra:
  ```bash
  pm2 --version
  ```
 
-### Step 3: Install Git and clone repository from GitHub
-To install git, run below commands in the terminal window:
+### Bước 3: Cài Git và clone repository từ GitHub
 
 ```bash
 sudo apt-get update -y
 sudo apt-get install git -y
 ```
-or 
-```bash
-sudo yum update -y
-sudo yum install git -y
-```
 
-Just to verify if system has git installed or not, please run below command in terminal:
+Kiểm tra git đã được cài hay chưa:
+
 ```bash
 git --version
 ```
 
-This command will print the git version in the terminal.
-
-Run below command to clone the code repository from Github:
+clone project từ github:
 
 ```bash
 git clone https://github.com/linux-vps/test2.git
 ```
 
-Navigate to the test2 first.
+chuyển vào thư mục test2
 ```bash
 cd test2
 ```
 
 
- Change all .env.example to .env
- Return to the test2 folder and typing this.
+Đổi tên file ".env.example" thành ".env"
+
  ```bash
  cd public
  mv .env.example .env
@@ -119,23 +108,24 @@ cd test2
  cd ..
  
  ```
-Now just run it with pm2
+Chạy web app
 
-Navigate to the server directory, install dependencies, and start the server:
+Navigate vào thư mục server:
 ```bash
 cd server
 npm install
 pm2 start index.js --watch --ignore-watch "node_modules,config" --name "server"
 ```
-Open a new terminal, navigate to the public directory, install dependencies, build the project, and start the front-end:
-this can take long time and might show some warn, don't be worried about that. Keep waiting :D ...
+Navigate vào thư mục public:
+Có thể do web app xây dựng trên window nên khi cài thư viện trên linux mất thời gian.
+Còn thư mục public này cài hơi lâu.
 ```bash
 cd public
 npm install
 npm run build
 pm2 start index.js --watch --ignore-watch "node_modules,config" --name "public"
 ```
-### Some documentation about this project:
+### Một số tài liệu tham khảo:
  1. OAuth 2.0 Protocol:
     https://training.bitrix24.com/support/training/course/?COURSE_ID=169&LESSON_ID=20110
     https://training.bitrix24.com/rest_help/oauth/index.php
@@ -145,6 +135,6 @@ pm2 start index.js --watch --ignore-watch "node_modules,config" --name "public"
     https://training.bitrix24.com/rest_help/
  5. Batch method:
     https://training.bitrix24.com/rest_help/general/batch.php
-### An little collection for postman for the crm module of bitrix24.
+### Postman ví dụ về việc sử dụng CRM REST API của Bitrix24.
 ***Example in postman***:
     - https://gist.github.com/gowizzard/3ae79b5fb3b4a73494e3c790c6d820c6
