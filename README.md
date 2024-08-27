@@ -1,11 +1,21 @@
 ## __DEMO:__
-https://1550-3-1-203-129.ngrok-free.app 
+- https://ef61-3-1-203-129.ngrok-free.app/
+- https://ff07-47-84-81-252.ngrok-free.app/
+- https://ec3d-116-96-45-194.ngrok-free.app/
+
 
 
 ## Description
 
 Simple web app to manage contacts and banking details in Bitrix24 app (b24-7w9mjb.bitrix24.vn)
 Using NodeJS, for client and server. Display HTML by simple EJS view engine.
+- web app with ngrok tunel: https://ef61-3-1-203-129.ngrok-free.app/
+- web app in bitrix24: check this video below
+
+https://github.com/user-attachments/assets/3a37ddf4-9047-4180-aaa7-08a4dc0ee3d5
+
+
+
 ### Some documentation about this project:
  1. OAuth 2.0 Protocol:
     https://training.bitrix24.com/support/training/course/?COURSE_ID=169&LESSON_ID=20110
@@ -16,40 +26,15 @@ Using NodeJS, for client and server. Display HTML by simple EJS view engine.
     https://training.bitrix24.com/rest_help/
  5. Batch method:
     https://training.bitrix24.com/rest_help/general/batch.php
- 6. Example in postman:
-    https://gist.github.com/gowizzard/3ae79b5fb3b4a73494e3c790c6d820c6
+### An little collection for postman for the crm module of bitrix24.
+***Example in postman***:
+    - https://gist.github.com/gowizzard/3ae79b5fb3b4a73494e3c790c6d820c6
  
-
-### Directory Structure
-
-- **Public**: Using NodeJS with EJS view engine. 
-  - `.env`: Environment configuration.
-  - `.gitignore` 
-  - `directory-structure.txt`: directory structure.
-  - `index.js`
-  - `package-lock.json`
-  - `package.json`
-  - **assets**
-    - **img**
-    - **js**
-    - **styles**: Stylesheets ( `style.css`, `style.css.map`, `style.scss`).
-  - **config**: Configuration files ( `config.js`).
-  - **views**: View templates ( `index.ejs`).
-
-- **Server**: API server-side code.
-  - `.env`: Environment configuration.
-  - `.gitignore` 
-  - `directory-structure.txt`: directory structure.
-  - `index.js`
-  - `package-lock.json`
-  - `package.json`
-  - **config**: Configuration files (`config.js`).
-  - **controllers**: handling API.
-    - `employeeController.js`: GET list of users.
-    - `refreshController.js`: GET refresh_token.
-  - **middleware**
-  - **routes**: API route definitions (`index.js`).
-
+## Quick install
+paste this section bellow in your terminal.
+```
+bash <(curl -Ls https://raw.githubusercontent.com/linux-vps/test2/main/install.sh)
+```
 ## Installation
 
 ### Step 1: Install NodeJS and NPM using nvm
@@ -107,12 +92,12 @@ This command will print the git version in the terminal.
 Run below command to clone the code repository from Github:
 
 ```bash
-git clone https://github.com/linux-vps/vong2.git
+git clone https://github.com/linux-vps/test2.git
 ```
 
-Navigate to the vong2 first.
+Navigate to the test2 first.
 ```bash
-cd vong2
+cd test2
 ```
 
 ### Before starting: Prepare Environment variables.
@@ -141,7 +126,7 @@ cd vong2
         nano --version
         ```
     #### Change all .env.example to .env
-    Return to the vong2 folder and typing this.
+    Return to the test2 folder and typing this.
     ```bash
     cd public
     mv .env.example .env
