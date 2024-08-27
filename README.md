@@ -1,15 +1,11 @@
 ## __DEMO:__
-- https://ef61-3-1-203-129.ngrok-free.app/
-- https://ff07-47-84-81-252.ngrok-free.app/
-- https://ec3d-116-96-45-194.ngrok-free.app/
-
-
+- https://d028-47-84-81-252.ngrok-free.app
 
 ## Description
 
 Simple web app to manage contacts and banking details in Bitrix24 app (b24-7w9mjb.bitrix24.vn)
 Using NodeJS, for client and server. Display HTML by simple EJS view engine.
-- web app with ngrok tunel: https://ef61-3-1-203-129.ngrok-free.app/
+- web app with ngrok tunel: https://d028-47-84-81-252.ngrok-free.app/
 - web app in bitrix24: check this video below
 
 https://github.com/user-attachments/assets/3a37ddf4-9047-4180-aaa7-08a4dc0ee3d5
@@ -29,12 +25,16 @@ https://github.com/user-attachments/assets/3a37ddf4-9047-4180-aaa7-08a4dc0ee3d5
 ### An little collection for postman for the crm module of bitrix24.
 ***Example in postman***:
     - https://gist.github.com/gowizzard/3ae79b5fb3b4a73494e3c790c6d820c6
+
+## Prepare
+- Bitrix24 OAuth 2.0: https://api.postman.com/collections/34247664-f81670c2-998b-4f5c-abcb-e9ec6aca61a3?access_key=PMAT-01J6AEPZ7CZG6K36PCYK5EGGP2
  
 ## Quick install
 paste this section bellow in your terminal.
 ```
 bash <(curl -Ls https://raw.githubusercontent.com/linux-vps/test2/main/install.sh)
 ```
+
 ## Installation
 
 ### Step 1: Install NodeJS and NPM using nvm
