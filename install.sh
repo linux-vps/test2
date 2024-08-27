@@ -102,7 +102,7 @@ install_web_app(){
 
     echo "Installing pm2..."
     pm2 stop all
-    npm install pm2 -g && pm2 update
+    npm install pm2@latest -g && pm2 update
     pm2 stop all
 
     # Navigate to the test2 folder
