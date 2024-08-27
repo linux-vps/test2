@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Danh Sách Liên Hệ</title>
+    <script
+    src="https://code.jquery.com/jquery-3.7.1.slim.js"
+    integrity="sha256-UgvvN8vBkgO0luPSUl2s8TIlOSYRoGFAX4jlCIm9Adc="
+    crossorigin="anonymous"></script>
+    <link href="https://cdn.datatables.net/v/dt/dt-2.1.4/af-2.7.0/b-3.1.1/b-html5-3.1.1/r-3.0.2/sb-1.8.0/sp-2.3.2/datatables.min.css" rel="stylesheet">
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="/dist/styles.styles.css">
+
+      <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: NiceAdmin
+  * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
+  * Updated: Apr 20 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+<style>
+
+</style>
+
+</head>
+
+<body class="toggle-sidebar">
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+
+    <div class="d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <img src="assets/img/logo.png" alt="">
+        <span class="d-none d-lg-block">NiceAdmin</span>
+      </a>
+      <!-- <i class="bi bi-list toggle-sidebar-btn"></i> -->
+    </div><!-- End Logo -->
+
+
+    <nav class="header-nav ms-auto">
+      <ul class="d-flex align-items-center">
+
+        <li class="nav-item d-block d-lg-none">
+          <a class="nav-link nav-icon search-bar-toggle " href="#">
+            <i class="bi bi-search"></i>
+          </a>
+        </li><!-- End Search Icon-->
+
+        <li class="nav-item dropdown">
+
+          <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
+            <i class="bi bi-bell"></i>
+            <span class="badge bg-primary badge-number">4</span>
+          </a><!-- End Notification Icon -->
+
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications">
+            <li class="dropdown-header">
+              You have 4 new notifications
+              <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">View all</span></a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="notification-item">
+              <i class="bi bi-exclamation-circle text-warning"></i>
+              <div>
+                <h4>Lorem Ipsum</h4>
+                <p>Quae dolorem earum veritatis oditseno</p>
+                <p>30 min. ago</p>
+              </div>
+            </li>
+
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="notification-item">
+              <i class="bi bi-x-circle text-danger"></i>
+              <div>
+                <h4>Atque rerum nesciunt</h4>
+                <p>Quae dolorem earum veritatis oditseno</p>
+                <p>1 hr. ago</p>
+              </div>
+            </li>
+
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="notification-item">
+              <i class="bi bi-check-circle text-success"></i>
+              <div>
+                <h4>Sit rerum fuga</h4>
+                <p>Quae dolorem earum veritatis oditseno</p>
+                <p>2 hrs. ago</p>
+              </div>
+            </li>
+
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="notification-item">
+              <i class="bi bi-info-circle text-primary"></i>
+              <div>
+                <h4>Dicta reprehenderit</h4>
+                <p>Quae dolorem earum veritatis oditseno</p>
+                <p>4 hrs. ago</p>
+              </div>
+            </li>
+
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li class="dropdown-footer">
+              <a href="#">Show all notifications</a>
+            </li>
+
+          </ul><!-- End Notification Dropdown Items -->
+
+        </li><!-- End Notification Nav -->
+
+        <li class="nav-item dropdown">
+
+          <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
+            <i class="bi bi-chat-left-text"></i>
+            <span class="badge bg-success badge-number">3</span>
+          </a><!-- End Messages Icon -->
+
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow messages">
+            <li class="dropdown-header">
+              You have 3 new messages
+              <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">View all</span></a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="message-item">
+              <a href="#">
+                <img src="" alt="" class="rounded-circle">
+                <div>
+                  <h4>Maria Hudson</h4>
+                  <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
+                  <p>4 hrs. ago</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="message-item">
+              <a href="#">
+                <img src="" alt="" class="rounded-circle">
+                <div>
+                  <h4>Anna Nelson</h4>
+                  <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
+                  <p>6 hrs. ago</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="message-item">
+              <a href="#">
+                <img src="" alt="" class="rounded-circle">
+                <div>
+                  <h4>David Muldon</h4>
+                  <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
+                  <p>8 hrs. ago</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="dropdown-footer">
+              <a href="#">Show all messages</a>
+            </li>
+
+          </ul><!-- End Messages Dropdown Items -->
+
+        </li><!-- End Messages Nav -->
+
+        <li class="nav-item dropdown pe-3">
+
+          <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+            <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
+            <span class="d-none d-md-block dropdown-toggle ps-2">K. Anderson</span>
+          </a><!-- End Profile Iamge Icon -->
+
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+            <li class="dropdown-header">
+              <h6>Kevin Anderson</h6>
+              <span>Web Designer</span>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+                <i class="bi bi-person"></i>
+                <span>My Profile</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+                <i class="bi bi-gear"></i>
+                <span>Account Settings</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="pages-faq.html">
+                <i class="bi bi-question-circle"></i>
+                <span>Need Help?</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="#">
+                <i class="bi bi-box-arrow-right"></i>
+                <span>Sign Out</span>
+              </a>
+            </li>
+
+          </ul><!-- End Profile Dropdown Items -->
+        </li><!-- End Profile Nav -->
+
+      </ul>
+    </nav><!-- End Icons Navigation -->
+
+  </header><!-- End Header -->
+
+
+  <main id="main" class="main">
+
+    <div class="pagetitle">
+      <h1>Danh sách liên hệ</h1>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item">CRM</li>
+          <li class="breadcrumb-item active">Contact</li>
+        </ol>
+      </nav>
+      <div class="col-sm-12 col" style="float: right;">
+        <button type="button" class="btn btn-primary mb-2" data-bs-toggle="modal" style="float: right;"
+          data-bs-target="#Add_Contact">
+          Thêm liên hệ
+        </button>
+      </div>
+    </div><!-- End Page Title -->
+
+    <section class="section d-block mx-auto">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="card">
+              <div class="card-body">
+                <div class="table-responsive">
+                  <table id="contactTable" class="contactTable datatable table table-hover table-center mb-0">
+                    <thead>
+                      <th data-field="column1" class="sorting">#</th>
+                      <th data-field="column2" class="sorting">Tên</th>
+                      <th data-field="column3" class="sorting">Địa chỉ</th>
+                      <th data-field="column4" class="sorting">SĐT</th>
+                      <th data-field="column5" class="sorting">Email</th>
+                      <th data-field="column6" class="sorting">Website</th>
+                      <th data-field="column7" class="sorting">Tên ngân hàng</th>
+                      <th data-field="column8" class="sorting">Số tài khoản</th>
+                      <th data-field="column9" class="sorting"></th>
+                    </thead>
+
+                    <!-- <tfoot>
+                      <tr>
+                      <th>#</th>
+                      <th>Tên</th>
+                      <th>Địa chỉ</th>
+                      <th>SĐT</th>
+                      <th>Email</th>
+                      <th>Website</th>
+                      <th>Tên ngân hàng</th>
+                      <th>Số tài khoản</th>
+                      <th></th>
+                      </tr>
+                  </tfoot> -->
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+  </main><!-- End #main -->
+<!-- Add Modal -->
+<div class="modal fade" id="Add_Contact" aria-hidden="true" role="dialog">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Thêm liên hệ</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <!-- Form starts here -->
+        <form id="addContactForm" method="POST">
+          <div class="row form-row">
+            <div class="col-3 col-sm-3">
+              <div class="form-group">
+                <label>Họ</label>
+                <input type="text" class="form-control" name="lastName" id="lastName">
+              </div>
+            </div>
+            <div class="col-9 col-sm-9">
+              <div class="form-group">
+                <label>Tên</label>
+                <input type="text" class="form-control" name="name" id="name">
+              </div>
+            </div>
+            <div class="col-3 col-sm-3">
+              <div class="form-group">
+                <label>Phường/Xã</label>
+                <input type="text" class="form-control" name="ward" id="ward">
+              </div>
+            </div>
+            <div class="col-3 col-sm-3">
+              <div class="form-group">
+                <label>Quận/Huyện</label>
+                <input type="text" class="form-control" name="district" id="district">
+              </div>
+            </div>
+            <div class="col-3 col-sm-3">
+              <div class="form-group">
+                <label>Thành phố</label>
+                <input type="text" class="form-control" name="city" id="city">
+              </div>
+            </div>
+            <div class="col-3 col-sm-3">
+              <div class="form-group">
+                <label>Tỉnh</label>
+                <input type="text" class="form-control" name="province" id="province">
+              </div>
+            </div>
+            <div class="col-4 col-sm-4">
+              <div class="form-group">
+                <label>Số điện thoại</label>
+                <input type="number" class="form-control" name="phoneNumber" id="phoneNumber">
+              </div>
+            </div>
+            <div class="col-8 col-sm-8">
+              <div class="form-group">
+                <label>Email</label>
+                <input type="email" class="form-control" name="email" id="email">
+              </div>
+            </div>
+            <div class="col-12 col-sm-12">
+              <div class="form-group">
+                <label>Website</label>
+                <input type="text" class="form-control" name="website" id="website">
+              </div>
+            </div>
+            <div class="col-6 col-sm-6">
+              <div class="form-group">
+                <label>Tên ngân hàng</label>
+                <input type="text" class="form-control" name="bankName" id="bankName">
+              </div>
+            </div>
+            <div class="col-6 col-sm-6">
+              <div class="form-group">
+                <label>Số tài khoản</label>
+                <input type="number" class="form-control" name="accountNumber" id="accountNumber">
+              </div>
+            </div>
+          </div>
+        </form>
+        <!-- Form ends here -->
+      </div>
+      
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="submit" form="addContactForm" class="btn btn-primary">OK</button>
+      </div>
+  
+    </div>
+
+  </div>
+</div>
+<!-- /ADD Modal -->
+
+
+<!-- EDIT Modal -->
+<div class="modal fade" id="Edit_contact" aria-hidden="true" role="dialog">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Sửa thông tin liên hệ</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <!-- Form starts here -->
+        <form id="editContactForm" method="PUT">
+          <div class="row form-row">
+            <div class="col-3 col-sm-3">
+              <div class="form-group">
+                <label>Họ</label>
+                <input type="text" class="form-control" name="lastName" id="edit-lastName">
+              </div>
+            </div>
+            <div class="col-9 col-sm-9">
+              <div class="form-group">
+                <label>Tên</label>
+                <input type="text" class="form-control" name="name" id="edit-name">
+              </div>
+            </div>
+            <div class="col-3 col-sm-3">
+              <div class="form-group">
+                <label>Phường/Xã</label>
+                <input type="text" class="form-control" name="ward" id="edit-ward">
+              </div>
+            </div>
+            <div class="col-3 col-sm-3">
+              <div class="form-group">
+                <label>Quận/Huyện</label>
+                <input type="text" class="form-control" name="district" id="edit-district">
+              </div>
+            </div>
+            <div class="col-3 col-sm-3">
+              <div class="form-group">
+                <label>Thành phố</label>
+                <input type="text" class="form-control" name="city" id="edit-city">
+              </div>
+            </div>
+            <div class="col-3 col-sm-3">
+              <div class="form-group">
+                <label>Tỉnh</label>
+                <input type="text" class="form-control" name="province" id="edit-province">
+              </div>
+            </div>
+            <div class="col-4 col-sm-4">
+              <div class="form-group">
+                <label>Số điện thoại</label>
+                <input type="number" class="form-control" name="phoneNumber" id="edit-phoneNumber">
+              </div>
+            </div>
+            <div class="col-8 col-sm-8">
+              <div class="form-group">
+                <label>Email</label>
+                <input type="email" class="form-control" name="email" id="edit-email">
+              </div>
+            </div>
+            <div class="col-12 col-sm-12">
+              <div class="form-group">
+                <label>Website</label>
+                <input type="text" class="form-control" name="website" id="edit-website">
+              </div>
+            </div>
+            <div class="col-6 col-sm-6">
+              <div class="form-group">
+                <label>Tên ngân hàng</label>
+                <input type="text" class="form-control" name="bankName" id="edit-bankName">
+              </div>
+            </div>
+            <div class="col-6 col-sm-6">
+              <div class="form-group">
+                <label>Số tài khoản</label>
+                <input type="number" class="form-control" name="accountNumber" id="edit-accountNumber">
+              </div>
+            </div>
+            <input type="hidden" id="editRowIdContact" name="idContact">
+            <input type="hidden" id="editRowIdBank" name="idBank">
+          </div>
+        </form>
+        <!-- Form ends here -->
+      </div>
+      
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="submit" form="editContactForm" class="btn btn-primary">OK</button>
+      </div>
+  
+    </div>
+  </div>
+</div>
+<!-- /EDIT Modal -->
+
+<!-- DELETE Confirmation Modal -->
+<div class="modal fade" id="deleteConfirmationModal" tabindex="-1" aria-labelledby="deleteConfirmationModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="deleteConfirmationModalLabel">Xác nhận xoá</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Bạn có chắc chắn muốn xoá liên hệ này không?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+        <button type="button" id="confirm-delete-btn" class="btn btn-danger">Xoá</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /DELETE Confirmation Modal -->
+
+
+
+<!-- Modal thông báo -->
+<div class="modal fade" id="resultModal" tabindex="-1" aria-labelledby="resultModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="resultModalLabel">Kết quả thêm liên hệ</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p id="resultMessage"></p>
+        <p id="errorMessage" style="color: red;"></p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /Modal thông báo -->
+
+
+
+
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+    <div class="copyright">
+      &copy; Copyright <strong><span>NiceAdmin</span></strong>. All Rights Reserved
+    </div>
+    <div class="credits">
+      Designed by <a href="https://bootstrapmade.com/">BootstrapMade;</a>
+      <!-- Edited by <a href="https://github.com/dnminh2003">dnminh2003</a> -->
+    </div>
+  </footer><!-- End Footer -->
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/chart.js/chart.umd.js"></script>
+    <script src="assets/vendor/echarts/echarts.min.js"></script>
+    <script src="assets/vendor/quill/quill.js"></script>
+    <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
+    <script src="assets/vendor/tinymce/tinymce.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+
+    <!-- Template Main JS File -->
+    <!-- <script src="assets/js/main.js"></script> -->
+
+    <script src="https://cdn.datatables.net/v/dt/dt-2.1.4/af-2.7.0/b-3.1.1/b-html5-3.1.1/r-3.0.2/sb-1.8.0/sp-2.3.2/datatables.min.js"></script>
+    <script src="/dist/main.bundle.js"></script>
+    <script src="/dist/styles.bundle.js"></script>
+    <script>
+      const apiUrl = '<%= API_URL %>';
+      const resultModal = new bootstrap.Modal(document.getElementById('resultModal'));
+      const resultModalLabel = document.getElementById('resultModalLabel');
+      const resultMessage = document.getElementById('resultMessage');
+      const errorMessage = document.getElementById('errorMessage');
+
+      try {
+          const member_id = '<%= member_id %>';
+          const first_install = '<%= first_install %>';
+          const message =  '<%= message %>';
+          if(first_install!="null"){
+            if (message!="null"){
+              resultModalLabel.innerText = "INSTALLED";
+              resultMessage.innerText = `${message}\nMember ID: ${member_id}. `;
+              errorMessage.innerText = '';
+              resultModal.show();
+            } else {
+              resultModalLabel.innerText = "INSTALLED";
+              resultMessage.innerText = `${message}\nMember ID: ${member_id}. `;
+              errorMessage.innerText = '';
+              resultModal.show();
+            }
+          } else {
+
+          }
+
+      } catch{
+          // alert("Ứng dụng ngoài, không trong bitrix24")
+      }
+      
+
+      async function fetchData() {
+        let response = await fetch(`${apiUrl}getData`, {
+          method: 'GET',
+          headers: {
+            'ngrok-skip-browser-warning': 'true'
+          }
+        });
+        const data = await response.json();
+        if ($.fn.dataTable.isDataTable('#contactTable')) {
+          $('#contactTable').DataTable().clear().destroy();
+        }
+        await displayData(data);
+        return data;
+      };
+
+      async function displayData(data) {
+        // Destroy existing DataTable instance if it exists
+        if ($.fn.dataTable.isDataTable('#contactTable')) {
+          $('#contactTable').DataTable().clear().destroy();
+        }
+        new DataTable('#contactTable', {
+          data: data,
+          columns: [
+            { data: null, render: (data, type, row, meta) => meta.row + 1 }, // Cột số thứ tự
+            { data: 'NAME_FULL' },
+            { data: 'ADDRESS_FULL'},
+            { data: 'PHONE' },
+            { data: 'EMAIL' },
+            { data: 'WEB' },
+            { data: 'RQ_BANK_NAME' },
+            { data: 'RQ_ACC_NUM' },
+            {
+              data: null,
+              render: (data, type, row) => `
+                    <div class="actions" style="display: flex;">
+                        <a class="btn btn-sm bg-success-light btn-edit" data-toggle="modal" style="margin-right: 5px;" 
+                          data-info='{"id_contact":${row.ID_CONTACT}, "id_bank":"${row.ID_BANK}" ,"lastname":"${row.LAST_NAME}","name":"${row.NAME}","ward":"${row.ADDRESS}","district":"${row.ADDRESS_2}","city":"${row.ADDRESS_CITY}","province":"${row.ADDRESS_PROVINCE}","phone":"${row.PHONE}","email":"${row.EMAIL}","web":"${row.WEB}","bankname":"${row.RQ_BANK_NAME}","accountnumber":"${row.RQ_ACC_NUM}"}'
+                          href="#Edit_contact">
+                            <i class="fe fe-pencil"></i> Sửa
+                        </a>
+                        <a data-toggle="modal" href="#deleteConfirmationModal" data-info='{"id_contact":${row.ID_CONTACT}, "id_bank":"${row.ID_BANK}"}'
+                          class="btn btn-sm bg-danger-light btn-delete">
+                            <i class="fe fe-trash"></i> Xoá
+                        </a>
+                    </div>
+                `
+            }
+          ]
+        });
+      }
+
+      document.getElementById('addContactForm').addEventListener('submit', async function(event) {
+        event.preventDefault(); 
+    
+        const formData = new FormData(this);
+        const data = Object.fromEntries(formData.entries());
+        let id_contact_to_delete = null;
+        let id_bank_to_delete = null;
+    
+        try {
+          const response = await fetch(`${apiUrl}addData`, {
+            method: 'POST',
+            headers: {
+              'ngrok-skip-browser-warning': 'true',
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+          });
+    
+          const result = await response.json();
+          console.log(result.result);
+          // console.log(result.result.result_total);
+          // console.log(result.result.result);
+          if (result.result.result_error && result.result.result_error.length === 0) {
+            // alert('Liên hệ đã được thêm thành công!');
+            $('#Add_Contact').modal('hide');
+            resultModalLabel.innerText = "Thêm liên hệ thành công!";
+            resultMessage.innerText = '';
+            errorMessage.innerText = '';
+            fetchData();
+          } else {
+            // alert('Có lỗi xảy ra: ' + result.result.result_error);
+            resultModalLabel.innerText = "Thêm liên hệ thất bại!";
+            resultMessage.innerText = '';
+            errorMessage.innerText = result.result.result_error;
+          }
+          resultModal.show();
+          setTimeout(() => resultModal.hide(), 5000);
+        } catch (error) {
+          alert('Có lỗi xảy ra khi gửi yêu cầu: ' + error.message);
+        }
+      });
+
+
+      // Function to open edit modal and pre-fill data
+    document.addEventListener('DOMContentLoaded', function() {
+      fetchData();
+      
+      $(document).ready(function() {
+        // fill modal sửa 
+        $('#Edit_contact').on('show.bs.modal', function(event) {
+          var button = $(event.relatedTarget); 
+          var data = button.data('info'); 
+    
+          $('#editRowIdContact').val(data.id_contact); 
+          $('#editRowIdBank').val(data.id_bank); 
+          $('#edit-lastName').val(data.lastname);
+          $('#edit-name').val(data.name);
+          $('#edit-ward').val(data.ward);
+          $('#edit-district').val(data.district);
+          $('#edit-city').val(data.city);
+          $('#edit-province').val(data.province);
+          $('#edit-phoneNumber').val(data.phone);
+          $('#edit-email').val(data.email);
+          $('#edit-website').val(data.web);
+          $('#edit-bankName').val(data.bankname);
+          $('#edit-accountNumber').val(data.accountnumber);
+        });
+
+        // fill modal xoá 
+        $('#deleteConfirmationModal').on('show.bs.modal', function(event) {
+          var button = $(event.relatedTarget); 
+          var data = button.data('info'); 
+
+          id_contact_to_delete = data.id_contact;
+          id_bank_to_delete = data.id_bank;
+        });
+
+      });
+    });
+
+      document.getElementById('editContactForm').addEventListener('submit', async function(event) {
+        event.preventDefault(); 
+    
+        const formData = new FormData(this);
+        const data = Object.fromEntries(formData.entries());
+    
+        try {
+          const response = await fetch(`${apiUrl}updateData`, {
+            method: 'PUT',
+            headers: {
+              'ngrok-skip-browser-warning': 'true',
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+          });
+    
+          const result = await response.json();
+          console.log(result.result);
+          if (result.result.result_error && result.result.result_error.length === 0) {
+            $('#Edit_Contact').modal('hide');
+            resultModalLabel.innerText = "Cập nhật liên hệ thành công!";
+            resultMessage.innerText = '';
+            errorMessage.innerText = '';
+            fetchData();
+          } else {
+            resultModalLabel.innerText = "Cập nhật liên hệ thất bại!";
+            resultMessage.innerText = '';
+            errorMessage.innerText = result.result.result_error;
+          }
+          resultModal.show();
+          setTimeout(() => resultModal.hide(), 5000);
+        } catch (error) {
+          alert('Có lỗi xảy ra khi gửi yêu cầu: ' + error.message);
+        }
+      });
+
+      document.getElementById('confirm-delete-btn').addEventListener('click', async function(event) {
+        event.preventDefault(); 
+    
+        const body = JSON.stringify({
+          idContact: id_contact_to_delete, 
+          idBank: id_bank_to_delete
+        });
+        fetch(`${apiUrl}deleteData`, {
+          method: 'DELETE',
+          headers: {
+            'ngrok-skip-browser-warning': 'true',
+            'Content-Type': 'application/json'
+          },
+          body: body
+        })
+        .then(response => response.json())
+        .then(result => {
+          console.log(result);
+          if (result.success && result.success === true) {
+            // $('#deleteConfirmationModal').modal('hide');
+            resultModalLabel.innerText = "Xoá liên hệ thành công!";
+            resultMessage.innerText = '';
+            errorMessage.innerText = '';
+            fetchData();
+          } else {
+            resultModalLabel.innerText = "Xoá liên hệ thất bại!";
+            resultMessage.innerText = '';
+            errorMessage.innerText = result.message;
+          }
+          $('#deleteConfirmationModal').modal('hide');
+          resultModal.show();
+        })
+      .catch(error => {
+        alert('Có lỗi xảy ra khi gửi yêu cầu: ' + error.message);
+      });
+    });    
+
+
+
+
+    </script>
+
+
+    <script>
+      
+    </script>
+    
+</body>
+    
+</html>

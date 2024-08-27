@@ -1,0 +1,23 @@
+root@ubuntu:/home/minh/vong2# ngrok config add-authtoken SD43GXQFSVFB2LNQSAXXSHVM5G3O5U6M
+Authtoken saved to configuration file: /root/.config/ngrok/ngrok.yml
+old handle path: 
+
+ngrok url server: https://2904-20-2-233-202.ngrok-free.app/
+
+PC: https://7898-116-96-44-236.ngrok-free.app/
+
+thông tin ngân hàng: https://b24-7w9mjb.bitrix24.vn/rest/crm.requisite.bankdetail.get?id=1?scope=&auth=
+
+contact by id: https://b24-7w9mjb.bitrix24.vn/rest/crm.contact.get?id=2?scope=&auth=
+
+Contact list: https://b24-7w9mjb.bitrix24.vn/rest/crm.contact.list?scope=&auth=
+
+command xuất cấu trúc thư mục: tree /F /A | findstr /V /I "node_modules" > structure.txt
+
+app scrert: NHrkXaPhRt4meLC2cKV7DoRKq2BUE6tSiAtBwTLMtg3Zf8J1Cr
+APP_ID: local.66b9d759e841e3.01890559
+BITRIX24_DOMAIN: b24-7w9mjb.bitrix24.vn
+
+
+6400ea66007056210070561f00000001403807f6ce215b23fcb7ff02eca7ee036c2254
+
