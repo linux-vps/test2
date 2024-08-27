@@ -36,7 +36,8 @@ https://github.com/user-attachments/assets/3a37ddf4-9047-4180-aaa7-08a4dc0ee3d5
   - BITRIX24_DOMAIN=<subdomain>.bitrix24.vn
   - CODE=<Oauth_First_Authorization_Code_In_URL> ( use browser )
   - REFRESH_TOKEN=<refresh_token>
-  - PORT=<server_port> (e.g. 5000)
+  - PORT=<server_port> (e.g. 5000).
+    
 - public:
   - BACKEND_SERVER_URL=<server_address>/api/ 
   - PORT=<client_port> (e.g. 5001)
