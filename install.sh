@@ -65,7 +65,9 @@ install_base() {
 install_web_app(){
     echo "Install NodeJS and NPM using nvm..."
     echo "Installing nvm..."
-    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
+    
+
 
     # activate nvm
     . ~/.nvm/nvm.sh
@@ -93,7 +95,7 @@ install_web_app(){
 
     # Clone repository from GitHub
     echo "Cloning repository from GitHub..."
-    git clone https://github.com/linux-vps/vong2.git
+    git clone https://github.com/linux-vps/test2.git
 
     echo "Installing nano..."
     sudo apt install nano -y
@@ -103,8 +105,8 @@ install_web_app(){
     npm install pm2 -g && pm2 update
     pm2 stop all
 
-    # Navigate to the vong2 folder
-    cd vong2
+    # Navigate to the test2 folder
+    cd test2
     echo "##########################################################"
 
     echo "##########################################################"
