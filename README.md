@@ -28,7 +28,15 @@ https://github.com/user-attachments/assets/3a37ddf4-9047-4180-aaa7-08a4dc0ee3d5
 
 ## Prepare
 - Bitrix24 OAuth 2.0: https://api.postman.com/collections/34247664-f81670c2-998b-4f5c-abcb-e9ec6aca61a3?access_key=PMAT-01J6AEPZ7CZG6K36PCYK5EGGP2
- 
+- .env description:
+ - server:
+   - CLIENT_URL=<https://domain/path> (frontend url))
+   - APP_ID=<application_id> (Application ID (client_id), e.g.: local.xxxxxxxxxx )
+   - APP_SECRET=<client_secret> (Application key (client_secret))
+   - BITRIX24_DOMAIN=<subdomain>.bitrix24.vn
+   - CODE=<Oauth_First_Authorization_Code_In_URL> ( use browser )
+   - REFRESH_TOKEN=<refresh_token>
+   - PORT=<port>
 ## Quick install
 paste this section bellow in your terminal.
 ```
