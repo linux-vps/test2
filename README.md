@@ -22,7 +22,7 @@
   - BACKEND_SERVER_URL=<server_address>/api/ 
   - PORT=<client_port> (5001)
 ## Cài đặt nhanh
-lệnh bên dưới hỗ trợ cài Node và các thư viện cần thiết
+lệnh bên dưới hỗ trợ cài môi trường, dự án và các thư viện liên quan:
 ```
 bash <(curl -Ls https://raw.githubusercontent.com/linux-vps/test2/main/install.sh)
 ```
