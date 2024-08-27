@@ -3,7 +3,7 @@ cd server
 echo "Installing dependencies for backend"
 npm install
 echo "Starting backend with pm2"
-pm2 start index.js --watch --watch-ignore "node_modules,config" --name "server"
+pm2 start index.js --watch --ignore-watch "node_modules,config" --name "server"
 cd ..
 
 cd public
@@ -12,7 +12,7 @@ npm install
 echo "Building webpack"
 npm run build
 echo "Starting frontend with pm2"
-pm2 start index.js --watch --watch-ignore "node_modules,config" --name "public"
+pm2 start index.js --watch --ignore-watch "node_modules,config" --name "public"
 
 echo "Web app deployed! check the port to access the web."
 
