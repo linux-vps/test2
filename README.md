@@ -1,6 +1,6 @@
 ## Demo
 - web app với ngrok tunel: https://d028-47-84-81-252.ngrok-free.app/ ( nếu trang không hiển thị thông tin thì cần refresh lại là được)
-- web app trong bitrix24: video bên dưới
+- web app trong bitrix24: video bên dưới (5 phút)
 
 [![Demo video](https://img.youtube.com/vi/BJ2MwkFwYYs/0.jpg)](https://www.youtube.com/watch?v=BJ2MwkFwYYs)
 
