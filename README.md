@@ -69,7 +69,17 @@ node -v
 npm -v
 ```
 
-### Step 2: Install Git and clone repository from GitHub
+### Step 2: Install PM2
+- PM2 is a popular production process manager for Node.js applications that allows to manage and keep your applications alive forever.
+```bash
+npm install pm2@latest -g && pm2 update
+```
+ check if PM2 is installed
+ ```bash
+ pm2 --version
+ ```
+
+### Step 3: Install Git and clone repository from GitHub
 To install git, run below commands in the terminal window:
 
 ```bash
@@ -112,13 +122,13 @@ cd test2
  cd ..
  
  ```
-Now just run it
+Now just run it with pm2
 
 Navigate to the server directory, install dependencies, and start the server:
 ```bash
 cd server
 npm install
-npm start
+pm2 start index.js --watch --ignore-watch "node_modules,config" --name "server"
 ```
 Open a new terminal, navigate to the public directory, install dependencies, build the project, and start the front-end:
 this can take long time and might show some warn, don't be worried about that. Keep waiting :D ...
@@ -126,8 +136,6 @@ this can take long time and might show some warn, don't be worried about that. K
 cd public
 npm install
 npm run build
-npm start
+pm2 start index.js --watch --ignore-watch "node_modules,config" --name "public"
 ```
-
-## We can keep the web alive with PM2
 
