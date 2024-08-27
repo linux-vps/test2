@@ -8,7 +8,7 @@ Using NodeJS, for client and server. Display HTML by simple EJS view engine.
 - web app with ngrok tunel: https://d028-47-84-81-252.ngrok-free.app/
 - web app in bitrix24: check this video below
 
-https://github.com/user-attachments/assets/3a37ddf4-9047-4180-aaa7-08a4dc0ee3d5
+https://www.youtube.com/watch?v=BJ2MwkFwYYs
 
 
 
