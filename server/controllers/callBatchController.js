@@ -98,6 +98,7 @@ export const callBatch = async (req, res) =>{
     try {
         const response = await callMethod('batch',payload);
         const data = await response.json();
+        
         if (!response.ok){
             return handleError(res, data, response.status, response.statusText);
         }

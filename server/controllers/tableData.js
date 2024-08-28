@@ -71,9 +71,9 @@ export const getData = async (req, res) => {
                 ADDRESS_2: contact.ADDRESS_2 ? contact.ADDRESS_2 : "",
                 ADDRESS_CITY: contact.ADDRESS_CITY ? contact.ADDRESS_CITY : "",
                 ADDRESS_PROVINCE: contact.ADDRESS_PROVINCE ? contact.ADDRESS_PROVINCE : "",
-                PHONE: contact.PHONE[0] ? contact.PHONE[0].VALUE : "",
-                EMAIL: contact.EMAIL[0] ? contact.EMAIL[0].VALUE : "",
-                WEB: contact.WEB[0] ? contact.WEB[0].VALUE : "",
+                PHONE: contact.PHONE.length > 0 ? contact.PHONE[contact.PHONE.length - 1].VALUE : "",
+                EMAIL: contact.EMAIL.length > 0 ? contact.EMAIL[contact.EMAIL.length - 1].VALUE : "",
+                WEB: contact.WEB.length > 0 ? contact.WEB[contact.WEB.length - 1].VALUE : "",
                 RQ_BANK_NAME: bankDetail ? bankDetail.RQ_BANK_NAME : "",
                 RQ_ACC_NUM: bankDetail ? bankDetail.RQ_ACC_NUM : ""
             };
@@ -118,7 +118,7 @@ export const updateData = async (req, res) => {
             halt: 0,
             cmd: {
                 updateContact: `crm.contact.update?ID=${idContact}&fields[LAST_NAME]=${lastName}&fields[NAME]=${name}&fields[ADDRESS]=${ward}&fields[ADDRESS_2]=${district}&fields[ADDRESS_CITY]=${city}&fields[ADDRESS_PROVINCE]=${province}&fields[OPENED]=Y&fields[ASSIGNED_BY_ID]=1&fields[TYPE_ID]=CLIENT&fields[SOURCE_ID]=SELF&fields[EMAIL][0][VALUE_TYPE]=WORK&fields[EMAIL][0][VALUE]=${email}&fields[EMAIL][0][TYPE_ID]=EMAIL&fields[WEB][0][VALUE_TYPE]=WORK&fields[WEB][0][VALUE]=${website}&fields[WEB][0][TYPE_ID]=WEB&fields[PHONE][0][VALUE_TYPE]=WORK&fields[PHONE][0][VALUE]=${phoneNumber}&fields[PHONE][0][TYPE_ID]=PHONE`,
-                addRequisite: `crm.requisite.add?fields[RQ_CONTACT]=${idContact}&fields[ORIGINATOR_ID]=${idContact}&fields[ENTITY_TYPE_ID]=3&fields[ENTITY_ID]=${idContact}&fields[PRESET_ID]=1&fields[NAME]=Banking-details&fields[XML_ID]=null&fields[ACTIVE]=Y&fields[SORT]=100`,
+                addRequisite: `crm.requisite.add?fields[RQ_CONTACT]=${idContact}&fields[ORIGINATOR_ID]=${idContact}&fields[ENTITY_TYPE_ID]=3&fields[ENTITY_ID]=${idContact}&fields[PRESET_ID]=1&fields[NAME]=Banking-details&fields[XML_ID]=null&fields[ACTIVE]=Y&fields[SORT]=100`,                                              // &fields[EMAIL][0][VALUE_TYPE]=WORK&fields[EMAIL][0][VALUE]=${email}&fields[EMAIL][0][TYPE_ID]=EMAIL&fields[WEB][0][VALUE_TYPE]=WORK&fields[WEB][0][VALUE]=${website}&fields[WEB][0][TYPE_ID]=WEB&fields[PHONE][0][VALUE_TYPE]=WORK&fields[PHONE][0][VALUE]=${phoneNumber}&fields[PHONE][0][TYPE_ID]=PHONE&REGISTER_SONET_EVENT=Y
                 addBankdetail: `crm.requisite.bankdetail.add?fields[RQ_CONTACT]=${idContact}&fields[ORIGINATOR_ID]=${idContact}&fields[ENTITY_ID]=%24result%5BaddRequisite%5D&fields[NAME]=Bank-details&fields[RQ_BANK_NAME]=${bankName}&fields[RQ_ACC_NUM]=${accountNumber}`
             }
         }
