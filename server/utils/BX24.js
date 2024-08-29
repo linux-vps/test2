@@ -1,7 +1,7 @@
 // server/utils/BX24.js
 
 import fetch from 'node-fetch';
-import { getRefreshToken, getStoredRefreshToken } from '../services/authService.js';
+import { refreshToken, getToken } from '../services/authService.js';
 import { BITRIX24_DOMAIN } from '../config/config.js';
 import { response } from 'express';
 
@@ -15,9 +15,9 @@ import { response } from 'express';
 async function callMethod(action, payload = {}) {
     let url = `https://${BITRIX24_DOMAIN}/rest/${action}.json`;
 
-    let token = await getStoredRefreshToken(); // lấy token
+    let token = await getToken(); // lấy token
     url = new URL(url);
-    url.searchParams.append('auth', token);
+    url.searchParams.append('auth', token.access_token);
     const params = payload.params || null;
     const id = payload.ID || null;
     delete payload.params;
@@ -27,14 +27,14 @@ async function callMethod(action, payload = {}) {
         // call API
         let response = null;
         response = await callApi(url, payload, id, params);
-        // console.log(response)
+
         // Nếu token hết hạn
         if (response.status === 401 && response.statusText==='Unauthorized') {
             console.log("Renew token");
 
-            token = await getRefreshToken(); // làm mới token
-            url.searchParams.set('auth', token);
-            // url.searchParams.append('auth', token);
+            token = await refreshToken(); // làm mới token
+            url.searchParams.set('auth', token.access_token);
+
             
             // call API again
             response = await callApi(url, payload, id, params);

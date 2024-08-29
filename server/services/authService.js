@@ -1,37 +1,45 @@
 // services/authService.js
 
 import fetch from 'node-fetch';
-import fs from 'fs';
-import { REFRESH_TOKEN_URL, TOKEN_STORAGE_FILE } from '../config/config.js';
-
+import jsonfile from 'jsonfile';
+import { APP_ID, APP_SECRET } from '../config/config.js';
+const TOKEN_STORAGE_FILE = "config/tokenStorage.json";
 //           làm mới token
-export const getRefreshToken = async (req, res) => {
+export const refreshToken = async (req, res) => {
+    const REFRESH_TOKEN_URL = 'https://oauth.bitrix.info/oauth/token';
     try {
-        const response = await fetch(REFRESH_TOKEN_URL);
+        const token = await getToken();
+        const url = new URL(REFRESH_TOKEN_URL);
+        url.searchParams.append('grant_type', 'refresh_token');
+        url.searchParams.append('client_id', APP_ID);
+        url.searchParams.append('client_secret', APP_SECRET);
+        url.searchParams.append('refresh_token', token.refresh_token);
+        const response = await fetch(url);
 
         if (!response.ok) {
+
             throw new Error(`Lấy access token thất bại: ${response.statusText}`);
         }
 
         const data = await response.json();
-        if (!data.access_token) {
-            throw new Error('URl đúng nhưng thiếu access token');
-        }
-        fs.writeFileSync(TOKEN_STORAGE_FILE, JSON.stringify({ refreshToken: data.access_token }));
-        // Viết vào file
-        return data.access_token;
+        await jsonfile.writeFile(TOKEN_STORAGE_FILE, { 
+            refresh_token: data.refresh_token, 
+            access_token: data.access_token 
+        }); 
+
+        return data;
     } catch (error) {
-        console.error('Error getting access token:', error.message);
+        console.error('Error getting access_token:', error.message);
         throw error; 
     }
 };
 
-export const getStoredRefreshToken = async () => {
+export const getToken = async () => {
     try {
-        const tokenData = JSON.parse(fs.readFileSync(TOKEN_STORAGE_FILE));
-        return tokenData.refreshToken;
+        const data = await jsonfile.readFile(TOKEN_STORAGE_FILE);
+        return data;
     } catch (error) {
-        console.error('Error when read access token:', error.message);
+        console.error('Error reading token :', error.message);
         throw error; 
     }
 };

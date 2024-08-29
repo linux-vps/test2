@@ -3,6 +3,7 @@
 import express from 'express';
 import cors from 'cors';
 import morgan from 'morgan';
+import './services/cronJob.js';
 import apiRoutes from './routes/index.js';
 import { PORT } from './config/config.js';
 import {errorHandler}  from './middlewares/errorHandler.js';
