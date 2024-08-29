@@ -36,24 +36,7 @@ app.get('/', (req, res) => {
 app.get('/getoauth2', (req, res) => {
   res.send("hello");
 });
-app.post('/install', (req, res) => {
-  const { DOMAIN, PROTOCOL, LANG, APP_SID } = req.query;
 
-  const currentTime = new Date().toLocaleString();
-  console.log(`App installed at ${currentTime}`);
-  console.log(`DOMAIN: ${DOMAIN}`);
-  console.log(`PROTOCOL: ${PROTOCOL}`);
-  console.log(`LANG: ${LANG}`);
-  console.log(`APP_SID: ${APP_SID}`);
-
-  res.render('index', {
-    API_URL: API_URL || null,
-    domain: DOMAIN ? DOMAIN : null,
-    protocol: PROTOCOL ? PROTOCOL : null,
-    lang: LANG ? LANG : null,
-    appSid: APP_SID ? APP_SID : null
-  });
-});
 
 
 
