@@ -11,8 +11,6 @@
   - APP_ID=<application_id> (Application ID (client_id), e.g.: local.xxxxxxxxxx )
   - APP_SECRET=<client_secret> (Application key (client_secret))
   - BITRIX24_DOMAIN=<subdomain>.bitrix24.vn
-  - CODE=<code ở url> ( bước chuẩn bị oauth )
-  - REFRESH_TOKEN=<refresh_token>
   - PORT=<server_port> ( 5000).
 
 ###### public:
