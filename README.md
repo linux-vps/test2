@@ -1,9 +1,7 @@
 ## Demo về bài làm này:
 - Web app với ngrok tunel: ( Nếu trang không có dữ liệu trong bảng, vui lòng refresh lại ạ )
   - https://d028-47-84-81-252.ngrok-free.app/
-- Video demo dưới đây dài 5 phút
 
-[![Demo video](https://img.youtube.com/vi/BJ2MwkFwYYs/0.jpg)](https://www.youtube.com/watch?v=BJ2MwkFwYYs)
 
 ## Chuẩn bị
 ##### Bitrix24 OAuth 2.0: https://api.postman.com/collections/34247664-f81670c2-998b-4f5c-abcb-e9ec6aca61a3?access_key=PMAT-01J6AEPZ7CZG6K36PCYK5EGGP2
