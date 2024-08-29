@@ -1,5 +1,3 @@
-// services/authService.js
-
 import fetch from 'node-fetch';
 import jsonfile from 'jsonfile';
 import { APP_ID, APP_SECRET } from '../config/config.js';
